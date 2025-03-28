@@ -1,0 +1,74 @@
+body{
+    margin:0;
+    padding:0;
+}
+main{
+    width: 100%;
+    background-color: #f7af75;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 3000px;
+}
+
+.mainContain{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: #f0b98c;
+    padding: 0 1rem;
+    
+}
+
+.CarouselDiv{
+    margin:2rem 0 ;
+    width: 100%;  
+    height: 300px; 
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+.mainImgsDiv{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    transition: all 0.5s;
+}
+.mainImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.productList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.productList ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.productList ul li{
+    list-style: none;
+    padding: 1rem;
+    margin: 0 1rem;
+    background-color: #4569df;
+    border-radius: 10%;
+}
+@media (max-width:768px) {
+    .mainContain{   
+        width: 100%;
+        padding: 0;
+    }
+    .CarouselDiv{
+        margin: 1rem 0;
+        width: 100%;
+    }
+}

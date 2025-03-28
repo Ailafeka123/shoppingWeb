@@ -7,21 +7,57 @@
     <meta name="description" content="購物網站作品">
     <meta name="keywords" content="網頁製作,網頁設計,購物網站作品,FireBase">
     <meta name="author" content="劉星緯">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+
 </head>
 <body>
-    <nav id='nav'class="navClass">
-        this is nav
-    </nav>
-    <container>
-        <h1>測試引入</h1>
-        <p id="textFirebase"></p>
-    </container>
+    <header>
+        <nav id='headerNav'class="navClass">
+            <div class="iconDiv">
+                <a  id="iconLink"  class="iconA"  href="#">
+                    <img src="https://picsum.photos/20/20" alt="icon">
+                </a>
+                <div  id="iconButton" class="iconButton" onclick="" >選單開關</div>
+            </div>
+            <search class="collapse">
+                <input type="text" id="searchInput" class="searchInput">
+                <button id="searchButton" class="searchButton">search</button>
+            </search>
+            <ul class="collapse">
+                <li><a>通知</a></li>
+                <li><a>購物車</a></li>
+                <li><a>個人資訊</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="mainContain" class="mainContain">
+            <div id="mainCarousel" class="CarouselDiv">
+                <div id="mainImgsDiv" class="mainImgsDiv">
+                    <img src="https://picsum.photos/400/400?1" alt="預覽1" class="mainImg">
+                    <img src="https://picsum.photos/400/400?2" alt="預覽2" class="mainImg">
+                    <img src="https://picsum.photos/400/400?3" alt="預覽3" class="mainImg">
+                </div>
+            </div>
+            <article id="ProductionDiv" class="">
+                <div id="productList" class="productList">
+                    <ul>
+                        <li class="productListItem">1</li>
+                        <li class="productListItem">2</li>
+                        <li class="productListItem">3</li>
+                        <li class="productListItem">4</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </main>
     <footer>
 
     </footer>
-    <script src="./bundle.js"></script>
+    <script type="module" src="./bundle.js"></script>
     <script>
-        // console.log(`確認是否有引入`)
+        
     </script>
 </body>
 </html>
