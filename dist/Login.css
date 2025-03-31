@@ -1,0 +1,37 @@
+.LoginFrom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* width: 50%; */
+    background-color: #f1c6a3;
+}
+.LoginAndRegister{
+    display: flex;
+    flex: row;
+    width: 30%;
+    align-items: center;
+    justify-content: space-around;
+}
+.formDiv{
+    background-color: #bb906d;
+    width: 50%;
+    text-align: center;
+}
+.formActvie{
+    background-color: #e0a16c;
+}
+
+.LoginDiv{
+    margin:1rem;
+}
+.errorDiv{
+    color: red;
+}
+
+.SignOutDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
