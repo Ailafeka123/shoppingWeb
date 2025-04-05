@@ -18,3 +18,10 @@
     height: 10%;
     background-color: #2630c7;
 }
+.ProductionDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
