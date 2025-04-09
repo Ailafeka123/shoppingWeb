@@ -172,6 +172,44 @@ main{
 
 
 
+
+.ProductionShowGrid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+    margin: 1rem;
+    box-sizing: border-box;
+}
+.ProductionShowImg{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    grid-column: 1/2;
+}
+.ProductionShowNameDiv{
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5,1fr);
+}
+.ProductionShowAddNumberDiv{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.ProductionShowButtonDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.ProductionShowContent{
+    padding: 0 1rem;
+}
+
+
+
 footer{
     width: 100%;
     background-color: #e79857;
@@ -238,6 +276,12 @@ footer{
         align-items: center;
         justify-content: space-between;
     }
+
+    .ProductionShowGrid{
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+
 
 
     footer{
