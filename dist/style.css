@@ -208,7 +208,20 @@ main{
     padding: 0 1rem;
 }
 
-
+.carProductionList{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 1rem;
+}
+.carProductionListPic{
+    width: 100px;
+    height: 100px;
+}
+.carTotalDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
 footer{
     width: 100%;
