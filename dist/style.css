@@ -1,8 +1,25 @@
+:root{
+    --background-color:#f7af75;
+}
+body.light{
+    --background-color:#ebe3dd;
+}
+body.dark{
+    --background-color:black;
+}
+
+
+.selectMod{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+}
 body{
+    position: relative;
     margin:0;
     padding:0;
     object-fit: center;
-    background-color: #f7af75;
+    background-color: var(--background-color);
     /* font-size: 1rem; */
 }
 main{
@@ -210,7 +227,7 @@ main{
 
 .carProductionList{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5,1fr);
     margin-top: 1rem;
 }
 .carProductionListPic{
@@ -221,6 +238,12 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.buyButtonDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer{
