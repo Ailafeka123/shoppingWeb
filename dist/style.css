@@ -1,11 +1,26 @@
 :root{
     --background-color:#f7af75;
+    --background-color-2:#e28f4a;
+    --background-color-3:#ec8c3e;
+    --text-color:rgb(0, 0, 0);
+    --tag-color:#25df35;
+    --border-color:rgb(19, 17, 17);
 }
 body.light{
-    --background-color:#ebe3dd;
+    --background-color:#ffffff;
+    --background-color-2:#e6ded6;
+    --background-color-3:#cfc9c2;
+    --text-color:rgb(0, 0, 0);
+    --tag-color:#25df25;
+    --border-color:rgb(19, 18, 18);
 }
 body.dark{
-    --background-color:black;
+    --background-color:rgb(41, 41, 41);
+    --background-color-2:rgb(70, 70, 70);
+    --background-color-3:rgb(94, 90, 90);
+    --text-color:white;
+    --tag-color:#dfb325;
+    --border-color:rgb(233, 229, 229);
 }
 
 
@@ -20,14 +35,15 @@ body{
     padding:0;
     object-fit: center;
     background-color: var(--background-color);
-    /* font-size: 1rem; */
+    font-size: 1rem;
 }
 main{
     display: flex;
     flex-direction: column;
     width: 80%;
     margin: auto;
-    background-color: #f0b98c;
+    color:var(--text-color);
+    background-color:var(--background-color-2);
     padding: 0 1rem;
 }
 
@@ -70,7 +86,7 @@ main{
     list-style: none;
     padding: 1rem;
     margin: 0 1rem;
-    background-color: #4569df;
+    background-color: var(--tag-color);
     border-radius: 10%;
 }
 .productListItem{
@@ -87,7 +103,7 @@ main{
     box-sizing: border-box;
     width: 100%;
     gap:1rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     
 }
 .indexProductionCard{
@@ -96,9 +112,12 @@ main{
     height: 400px;
     grid-template-rows: 50% 40% 10%;
     transition: all 0.3s;
+    box-sizing: border-box;
 }
 .indexProductionCard:hover{
     opacity: 0.5;
+    border: 1px solid var(--border-color);
+    box-shadow: 2px 2px 10px var(--border-color);
 }
 
 .indexProductionCardImg{
@@ -248,7 +267,7 @@ main{
 
 footer{
     width: 100%;
-    background-color: #e79857;
+    background-color: var(--background-color-3);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 80% 20%;

@@ -4,7 +4,7 @@ header{
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #e79857;
+    background-color: var( --background-color-3);
     box-sizing: border-box;
     height: 80px;
 }
@@ -22,11 +22,11 @@ nav{
     padding: 1rem;
 }
 a{
-    color:black;
+    color:var(--text-color);
     text-decoration: none;
 }
 a:active{
-    color: black;
+    color: var(--text-color);
 }
 .iconButton{
     display: none;

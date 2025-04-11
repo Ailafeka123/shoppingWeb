@@ -1,7 +1,3 @@
-:root{
-    --login-background-color:#f0b98c;
-
-}
 
 .LoginFrom{
     display: flex;
@@ -12,7 +8,7 @@
     align-items: center;
 }
 .LoginFormBox{
-    background-color: var(--login-background-color);
+    background-color: var(--background-color-2);
 }
 .LoginAndRegister{
     display: flex;
