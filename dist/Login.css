@@ -1,37 +1,100 @@
 
+
 .LoginFrom{
     display: flex;
-    width: 100%;
-    height: 100vh;
-    align-items: center;
+    width: 50%;
+    height: 50vh;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    margin: 2rem 0 ;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    overflow: hidden;
 }
-.LoginFormBox{
-    background-color: var(--background-color-2);
+.LoginFrom div{
+    width: 100%;
 }
 .LoginAndRegister{
     display: flex;
     flex: row;
-    width: 100%;
+    width: 90%;
     align-items: center;
     justify-content: space-around;
-}
-.formDiv{
-    background-color: #bb906d;
-    width: 50%;
+    margin: 1rem 0 ;
+    border-radius: 4px;
+    overflow: hidden;
     text-align: center;
 }
+.LoginAndRegister h2{
+    margin: 0;
+    width: 50%;
+}
+.formDiv{   
+    background-color: var(--background-color-3);
+}
 .formActvie{
-    background-color: #e0a16c;
+    background-color:var(--background-color-2);
 }
 
-.LoginDiv{
-    margin:1rem;
+.inputDiv{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    justify-content: start;
 }
+.inputDiv label{
+    text-align: start;
+    margin: 1rem 0;
+}
+.inputDiv input{
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 1rem;
+    box-sizing: border-box;
+    background-color: var(--select-mod-color);
+    color:var(--text-color);
+    border-radius: 8px;
+}
+.inputDiv input:focus{
+    background-color: var(--background-color-2);
+    border: 1px solid var(--background-color-3);
+}
+.eyesClass{
+    position: absolute; 
+    width: 30px;
+    height: 1.5rem;
+    top: 67%;
+    right:1rem;
+    border-radius: 8px;
+}
+.eyesClass img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
 .errorDiv{
     color: red;
 }
+
+.subButton{
+    width: 20%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+
+.forgetPassword{
+    margin: 1rem 0;
+}
+
+
+
+
 
 .SignOutDiv{
     display: flex;
@@ -41,6 +104,11 @@
 }
 @media (max-width:768px) {
     .LoginFrom{
-        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+    .LoginAndRegister{
+        width: 100%;
+        margin: 0 0 1rem 0;
     }
 }

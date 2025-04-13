@@ -1,34 +1,102 @@
 :root{
-    --background-color:#f7af75;
-    --background-color-2:#e28f4a;
-    --background-color-3:#ec8c3e;
+    --background-color:#5529F2;
+    --background-color-2:#6D49F2;
+    --background-color-3:#BBACF2;
     --text-color:rgb(0, 0, 0);
-    --tag-color:#25df35;
+    --tag-color:#8D7EF2;
     --border-color:rgb(19, 17, 17);
+    --select-mod-color:#F2F2F2;
 }
 body.light{
-    --background-color:#ffffff;
-    --background-color-2:#e6ded6;
-    --background-color-3:#cfc9c2;
+    --background-color:#A6A6A6;
+    --background-color-2:#D9D9D9;
+    --background-color-3:#F2F2F2;
     --text-color:rgb(0, 0, 0);
-    --tag-color:#25df25;
+    --tag-color:#737373;
     --border-color:rgb(19, 18, 18);
+    --select-mod-color:#737373;
 }
 body.dark{
     --background-color:rgb(41, 41, 41);
     --background-color-2:rgb(70, 70, 70);
     --background-color-3:rgb(94, 90, 90);
     --text-color:white;
-    --tag-color:#dfb325;
+    --tag-color:#5e5c5c;
     --border-color:rgb(233, 229, 229);
+    --select-mod-color:#A6A6A6;
+}
+
+.fixSelectModDiv{
+    position: fixed;
+    right: -75px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+    transform:rotate(0deg);
+    border-radius: 50%;
+    transition: all 1s;
+    box-sizing: border-box;
+    border: rgba(255, 255, 255,0) solid 50px;
+}
+.fixSelectModDivActive{
+    right:-30px;
+    transform:rotate(360deg);
+    border: var(--select-mod-color) solid 30px;
 }
 
 
 .selectMod{
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
 }
+.selectMod img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.optionsRing{
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    transform: scale(0);
+    transition: all 0.5s;
+}
+.optionsRingActive{
+    transform: scale(1);
+}
+
+.optionsRing img{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.options1{
+    position:absolute;
+    top: -55px;
+    left: 40px;
+}
+.options2{
+    position:absolute;
+}
+.options3{
+    position: absolute;
+    top: 55px;
+    left: 40px;
+}
+
 body{
     position: relative;
     margin:0;
@@ -37,10 +105,16 @@ body{
     background-color: var(--background-color);
     font-size: 1rem;
 }
+html *{
+    transition: all 0.5s;
+}
+
 main{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 80%;
+    min-height: 100vh;
     margin: auto;
     color:var(--text-color);
     background-color:var(--background-color-2);
@@ -71,23 +145,24 @@ main{
 
 
 .productList{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    display: grid;
     width: 100%;
 }
 .productList ul{
-    display: flex;
-    flex-direction: row;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .productList ul li{
+    text-align: center;
     list-style: none;
     padding: 1rem;
-    margin: 0 1rem;
     background-color: var(--tag-color);
-    border-radius: 10%;
 }
 .productListItem{
     cursor: pointer;
@@ -273,6 +348,7 @@ footer{
     grid-template-rows: 80% 20%;
     place-items: center;
     text-align: center;
+    color:var(--text-color)
 }
 .footerConnect{
     grid-column: 1;
@@ -281,8 +357,13 @@ footer{
     grid-column: 2;
 }
 .footerCopyright{
+    width: 100%;
     grid-row: 2/3;
     grid-column: 1/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
 }
 @media (max-width:768px) {
     main{   
