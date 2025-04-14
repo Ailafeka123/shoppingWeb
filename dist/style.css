@@ -6,6 +6,7 @@
     --tag-color:#8D7EF2;
     --border-color:rgb(19, 17, 17);
     --select-mod-color:#F2F2F2;
+    --headerHeigth:80px;
 }
 body.light{
     --background-color:#A6A6A6;
@@ -25,6 +26,35 @@ body.dark{
     --border-color:rgb(233, 229, 229);
     --select-mod-color:#A6A6A6;
 }
+*,*::after,*::before{
+    box-sizing: border-box;
+    user-select:none;
+}
+
+html *{
+    transition: all 0.5s;
+}
+
+
+body{
+    position: relative;
+    margin:0;
+    padding:0;
+    object-fit: center;
+    background-color: var(--background-color);
+    font-size: 1rem;
+}
+
+
+a{
+    color:var(--text-color);
+    text-decoration: none;
+}
+a:active{
+    color: var(--text-color);
+}
+
+
 
 .fixSelectModDiv{
     position: fixed;
@@ -97,17 +127,17 @@ body.dark{
     left: 40px;
 }
 
-body{
-    position: relative;
-    margin:0;
-    padding:0;
-    object-fit: center;
-    background-color: var(--background-color);
-    font-size: 1rem;
-}
-html *{
-    transition: all 0.5s;
-}
+
+
+
+
+
+
+
+
+
+
+
 
 main{
     display: flex;
@@ -115,7 +145,7 @@ main{
     align-items: center;
     width: 80%;
     min-height: 100vh;
-    margin: auto;
+    margin: var(--headerHeigth) auto 0;
     color:var(--text-color);
     background-color:var(--background-color-2);
     padding: 0 1rem;
@@ -329,6 +359,7 @@ main{
     height: 100px;
 }
 .carTotalDiv{
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-around;
