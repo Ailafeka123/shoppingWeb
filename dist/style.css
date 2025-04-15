@@ -260,6 +260,7 @@ main{
 }
 
 .SearchProductionList20{
+    width: 100%;
     display: grid;
     gap: 1rem;
     margin:1rem 0 ;
@@ -422,6 +423,7 @@ footer{
         grid-template-columns:repeat(auto-fill,minmax(200px, 1fr));
     }
     .SearchProductionList20{
+        width: 80%;
         display: grid;
         margin: 1rem;
         gap: 1rem;
