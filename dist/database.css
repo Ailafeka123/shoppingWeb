@@ -1,8 +1,35 @@
-.dataSearch{
+.dataSearchDiv{
     width: 100%;
+    height: 4rem;
     display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    margin:1rem 0;
+}
+
+
+.dataSearch{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+.dataSearch input{
+    width: 80%;
+    height: 100%;
+    padding: 0 1rem;
+}
+.dataSearchDiv Button{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--background-color-3);
 }
 
 .databaseShowDiv{
@@ -12,16 +39,23 @@
     transform:translate(-50%,-50%);
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 50%;
-    background-color: #fff;
+    background-color: var(--background-color);
+    border: 2px solid var(--border-color);
+    z-index: 99;
+}
+.databaseShowDiv button{
+    color: var(--text-color);
+    background-color: var(--background-color-3);
 }
 .databaseHeader{
     display: flex;
     flex-direction: row;
     justify-content:flex-end;
     width: 100%;
-    height: 10%;
-    background-color: #2630c7;
+    height: 3rem;
+    background-color: var(--background-color-2);
 }
 .dataInputDiv{
     width: 100%;
@@ -40,7 +74,17 @@
     align-items: center;
     justify-content: space-around;
 }
-
+.dataSubmitDiv{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dataSubmitDiv button{
+    height: 100%;
+    width: 20%;
+}
 
 .ProductionDiv{
     width: 100%;
@@ -48,7 +92,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 1rem 0 0 0 ;
+    padding: 1rem 0 ;
+    border: 2px solid var(--border-color);
 }
 .productionImgDiv{
     width: 200px;
@@ -63,10 +108,31 @@
 }
 .dataInput{
     border-radius: 4%;
-
+}
+.ProductionButtonDiv{
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.ProductionButtonDiv button{
+    height: 100%;
+    width: 50%;
+    color: var(--text-color);
+    background-color: var(--background-color-3);
 }
 
 @media (max-width:768px) {
+    .dataLable{
+        flex-direction: column;
+        align-items: start;
+    }
+    .dataSubmitDiv button{
+        height: 100%;
+        width: 100%;
+    }
+
     .ProductionDiv{
         flex-direction: column;
         box-sizing: border-box;
@@ -74,9 +140,17 @@
         padding: 1rem 1rem 0 1rem;
     }
     .ProductionButtonDiv{
+        height: 3rem;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+    }
+    .ProductionButtonDiv button{
+        height: 100%;
+        width: 50%;
+        color: var(--text-color);
+        background-color: var(--background-color-3);
     }
 }
