@@ -4,12 +4,12 @@
     --background-color-3:#BBACF2;
     --text-color:rgb(0, 0, 0);
     --tag-color:#8D7EF2;
-    --border-color:rgb(19, 17, 17);
+    --border-color:rgb(19, 17, 17); 
     --select-mod-color:#F2F2F2;
     --headerHeigth:80px;
 }
 body.light{
-    --background-color:#A6A6A6;
+    --background-color:white;
     --background-color-2:#D9D9D9;
     --background-color-3:#F2F2F2;
     --text-color:rgb(0, 0, 0);
@@ -26,181 +26,12 @@ body.dark{
     --border-color:rgb(233, 229, 229);
     --select-mod-color:#A6A6A6;
 }
-*,*::after,*::before{
-    box-sizing: border-box;
-    user-select:none;
-}
-
+/* 
 html *{
     transition: all 0.5s;
-}
+} */
 
 
-body{
-    position: relative;
-    margin:0;
-    padding:0;
-    object-fit: center;
-    background-color: var(--background-color);
-    font-size: 1rem;
-}
-
-
-a{
-    color:var(--text-color);
-    text-decoration: none;
-}
-a:active{
-    color: var(--text-color);
-}
-
-
-
-.fixSelectModDiv{
-    position: fixed;
-    right: -75px;
-    top: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
-    height: 150px;
-    z-index: 1;
-    transform:rotate(0deg);
-    border-radius: 50%;
-    transition: all 1s;
-    box-sizing: border-box;
-    border: rgba(255, 255, 255,0) solid 50px;
-}
-.fixSelectModDivActive{
-    right:-30px;
-    transform:rotate(360deg);
-    border: var(--select-mod-color) solid 30px;
-}
-
-
-.selectMod{
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    border-radius: 50%;
-    text-align: center;
-}
-.selectMod img{
-    width: 100%;
-    height: 100%;
-}
-
-
-.optionsRing{
-    position: absolute;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    left: -30px;
-    width: 30px;
-    height: 30px;
-    transform: scale(0);
-    transition: all 0.5s;
-}
-.optionsRingActive{
-    transform: scale(1);
-}
-
-.optionsRing img{
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-}
-.options1{
-    position:absolute;
-    top: -55px;
-    left: 40px;
-}
-.options2{
-    position:absolute;
-}
-.options3{
-    position: absolute;
-    top: 55px;
-    left: 40px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    min-height: 100vh;
-    margin: var(--headerHeigth) auto 0;
-    color:var(--text-color);
-    background-color:var(--background-color-2);
-    padding: 0 1rem;
-}
-
-.CarouselDiv{
-    margin:2rem 0 ;
-    width: 100%;  
-    height: 300px; 
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-
-}
-.mainImgsDiv{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    transition: all 0.5s;
-}
-.mainImg{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-.productList{
-    display: grid;
-    width: 100%;
-}
-.productList ul{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-    justify-content: center;
-    gap: 1rem;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.productList ul li{
-    text-align: center;
-    list-style: none;
-    padding: 1rem;
-    background-color: var(--tag-color);
-}
-.productListItem{
-    cursor: pointer;
-    transition: all 0.3s;
-}
-.productListItem:hover{
-    opacity: 0.5;
-}
 
 .indexProductionDiv{
     display: grid;
@@ -398,14 +229,7 @@ footer{
     gap:1rem;
 }
 @media (max-width:768px) {
-    main{   
-        width: 100%;
-        padding: 0;
-    }
-    .CarouselDiv{
-        margin: 1rem 0;
-        width: 100%;
-    }
+    
     .indexProductionDiv{
         padding: 0 1rem;
     }

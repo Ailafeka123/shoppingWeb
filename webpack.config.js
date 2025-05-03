@@ -1,3 +1,4 @@
+const { type } = require('os');
 const path = require('path');
 module.exports = {
     entry: "./src/index.js", // 你的進入點
@@ -20,9 +21,21 @@ module.exports = {
               },
           },
         },
+        //處理本地圖片
         {
           test:/\.(png|jpe?g|gif|svg)$/i,
           type: 'asset/resource',
+          
+        },
+        //處理css
+        {
+          test:/\.css/,
+          use:['style-loader', 'css-loader'],
+        },
+        //處理scss
+        {
+          test:/\.scss$/,
+          use:['style-loader', 'css-loader', 'sass-loader'],
         }
       ],
 
