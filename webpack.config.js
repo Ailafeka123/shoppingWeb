@@ -1,5 +1,6 @@
 const { type } = require('os');
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: "./src/index.js", // 你的進入點
     output: {
@@ -38,8 +39,14 @@ module.exports = {
           use:['style-loader', 'css-loader', 'sass-loader'],
         }
       ],
-
     },
+    plugins:[
+      new CopyPlugin({
+        patterns: [
+          { from: 'public', to: '.' },
+        ],
+      }),
+    ],
     devServer:{
             static:{
                 directory: path.join(__dirname,'dist'),

@@ -30,28 +30,8 @@ body.dark{
     --select-mod-color:#A6A6A6;
 }
 
-.SearchItemDiv{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.SearchProductionList10{
-    display: grid;
-    gap: 1rem;
-    margin:1rem 0 ;
-    box-sizing: border-box;
-}
 
-.SearchProductionList20{
-    width: 100%;
-    display: grid;
-    gap: 1rem;
-    margin:1rem 0 ;
-    box-sizing: border-box;
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-}
 .SearchProductionGrid{
     position: relative;
     transition: all 0.3s;
