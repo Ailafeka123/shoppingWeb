@@ -45,27 +45,9 @@ body.dark{
 
 
 
-.carProductionList{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    margin-top: 1rem;
-}
-.carProductionListPic{
-    width: 100px;
-    height: 100px;
-}
-.carTotalDiv{
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
 
-.buyButtonDiv{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
+
 
 
 
@@ -95,14 +77,6 @@ footer{
     gap:1rem;
 }
 @media (max-width:768px) {
-    
-    .ProductionShowGrid{
-        grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
-    }
-
-
-
     footer{
         position: relative;
         padding: 1rem 0 ;
