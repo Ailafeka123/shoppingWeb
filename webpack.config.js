@@ -24,7 +24,7 @@ module.exports = {
         },
         //處理本地圖片
         {
-          test:/\.(png|jpe?g|gif|svg)$/i,
+          test:/\.(png|jpe?g|gif|svg|webp)$/i,
           type: 'asset/resource',
           
         },
