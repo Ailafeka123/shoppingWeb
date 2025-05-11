@@ -1,0 +1,69 @@
+.fixSelectModDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: -75px;
+    top: 20%;
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+    transform:rotate(0deg);
+    border-radius: 50%;
+    transition: all 0.5s;
+    border: rgba(255, 255, 255,0) solid 50px;
+
+    &.fixSelectModDivActive{
+        right:-30px;
+        transform:rotate(360deg);
+        border: var(--select-mod-color) solid 30px;
+    }
+
+    .selectMod{
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        img{  
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .optionsRing{
+        position: absolute;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        left: -30px;
+        width: 30px;
+        height: 30px;
+        transform: scale(0);
+        transition: all 0.5s;
+        &.optionsRingActive{
+            transform: scale(1);
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+        .options1{
+            position:absolute;
+            top: -55px;
+            left: 40px;
+        }
+        .options2{
+            position:absolute;
+        }
+        .options3{
+            position: absolute;
+            top: 55px;
+            left: 40px;
+        }
+        
+    }
+
+}

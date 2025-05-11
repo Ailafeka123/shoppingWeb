@@ -2,10 +2,10 @@ const { type } = require('os');
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
-    entry: "./src/index.js", // 你的進入點
+    entry: "./src/index.js", //進入點
     output: {
-      path: path.resolve(__dirname, "dist"), // ✅ 絕對路徑，指定輸出資料夾
-      filename: "bundle.js", // ✅ 這裡應該只是檔案名稱，不要加 "/"
+      path: path.resolve(__dirname, "dist"), //指定輸出資料夾
+      filename: "bundle.js", //檔案名稱
     },
     module:{
       rules:[

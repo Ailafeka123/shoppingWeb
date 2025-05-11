@@ -1,0 +1,47 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    user-select:none;
+}
+@mixin flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    position: relative;
+    margin:0;
+    padding:0;
+    object-fit: center;
+    background-color: var(--background-color);
+    font-size: 1rem;
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+a{
+    color:var(--text-color);
+    text-decoration: none;
+    &:active{
+        color: var(--text-color);
+    }
+}
+
+
+
+main{
+    @include flexCenter();
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    margin: var(--headerHeigth) auto 0;
+    color:var(--text-color);
+    background-color:var(--background-color);
+    padding: 0;
+
+    @media (max-width:768px){
+        width: 100%;
+        padding: 0;
+    }
+}
+

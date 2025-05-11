@@ -1,4 +1,7 @@
 node_modules
-src
+# src
 stats.json
-public
+# public
+
+dist
+src/component/firebase.js

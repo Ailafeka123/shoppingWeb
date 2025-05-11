@@ -1,0 +1,33 @@
+.productList{
+    display: grid;
+    width: 80%;
+    ul{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+        justify-content: center;
+        gap: 1rem;
+        padding: 0;
+        box-sizing: border-box;
+        li{
+            text-align: center;
+            list-style: none;
+            padding: 1rem;
+            border-radius: 8px;
+            background-color: var(--tag-color);
+            &.productListItem{
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            &.productListItem:hover{
+                opacity: 0.5;
+            }
+            &.productListItemActive{
+                background-color: var(--tag-color-2);
+            }
+        }   
+    }
+    @media (max-width:768px) {
+        width: 100%;
+    }
+}
